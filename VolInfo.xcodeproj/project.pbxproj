@@ -14,6 +14,8 @@
 		98A38C412557416A00CFB7AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A38C3F2557416A00CFB7AA /* LaunchScreen.storyboard */; };
 		98A38C50255742BC00CFB7AA /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A38C4F255742BC00CFB7AA /* MainNavigationController.swift */; };
 		98A38C562557433A00CFB7AA /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A38C552557433A00CFB7AA /* CustomTabBarController.swift */; };
+		98A38C5F255743EA00CFB7AA /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A38C5E255743EA00CFB7AA /* GroupCell.swift */; };
+		98A38C652557512D00CFB7AA /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A38C642557512D00CFB7AA /* BaseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		98A38C422557416A00CFB7AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98A38C4F255742BC00CFB7AA /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		98A38C552557433A00CFB7AA /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		98A38C5E255743EA00CFB7AA /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		98A38C642557512D00CFB7AA /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		98A38C332557416700CFB7AA /* VolInfo */ = {
 			isa = PBXGroup;
 			children = (
+				98A38C622557511700CFB7AA /* Supporting Files */,
+				98A38C58255743B400CFB7AA /* Scene3 */,
 				98A38C522557430F00CFB7AA /* Scene2 */,
 				98A38C4C2557426F00CFB7AA /* Scene1 */,
 				98A38C4B2557424800CFB7AA /* App */,
@@ -124,6 +130,70 @@
 				98A38C552557433A00CFB7AA /* CustomTabBarController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		98A38C58255743B400CFB7AA /* Scene3 */ = {
+			isa = PBXGroup;
+			children = (
+				98A38C5A255743BF00CFB7AA /* Item */,
+				98A38C59255743B900CFB7AA /* Group */,
+			);
+			path = Scene3;
+			sourceTree = "<group>";
+		};
+		98A38C59255743B900CFB7AA /* Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		98A38C5A255743BF00CFB7AA /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				98A38C5D255743D100CFB7AA /* View */,
+				98A38C5C255743CD00CFB7AA /* Controller */,
+				98A38C5B255743C900CFB7AA /* Model */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		98A38C5B255743C900CFB7AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		98A38C5C255743CD00CFB7AA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		98A38C5D255743D100CFB7AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				98A38C5E255743EA00CFB7AA /* GroupCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		98A38C622557511700CFB7AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				98A38C632557512100CFB7AA /* Inherited */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		98A38C632557512100CFB7AA /* Inherited */ = {
+			isa = PBXGroup;
+			children = (
+				98A38C642557512D00CFB7AA /* BaseCell.swift */,
+			);
+			path = Inherited;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,9 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98A38C5F255743EA00CFB7AA /* GroupCell.swift in Sources */,
 				98A38C50255742BC00CFB7AA /* MainNavigationController.swift in Sources */,
 				98A38C392557416700CFB7AA /* ViewController.swift in Sources */,
 				98A38C562557433A00CFB7AA /* CustomTabBarController.swift in Sources */,
+				98A38C652557512D00CFB7AA /* BaseCell.swift in Sources */,
 				98A38C352557416700CFB7AA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
