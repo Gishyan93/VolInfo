@@ -8,12 +8,10 @@
 import UIKit
 
 class AdmissionsController: BaseListController, UICollectionViewDelegateFlowLayout {
-
     //
     //MARK: - Properties
     //
     private let cellID = "cellID"
-    
     private var admissions = [Admission]()
     //
     //MARK: - Lifecycle methods
@@ -21,27 +19,27 @@ class AdmissionsController: BaseListController, UICollectionViewDelegateFlowLayo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-            
-        admissions.append(.init(address: "Արշակունյաց 40 Արշակունյաց 40 Արշակունյաց 40", contactnumber: "+37494000000"))
-        admissions.append(.init(address: "Բզնունյաց 30", contactnumber: "+37494000000"))
-        admissions.append(.init(address: "Ադոնցի 18", contactnumber: "+37494000000"))
-        admissions.append(.init(address: "Մաշտոցի 7", contactnumber: "+37494000000"))
+        createFakeRepository()
         setupCollectionView()
     }
     
     //
     //MARK: - Functions
     //
+    private func createFakeRepository() {
+        admissions.append(.init(address: "Արշակունյաց 40 Արշակունյաց 40 Արշակունյաց 40", contactnumber: "+37494000000"))
+        admissions.append(.init(address: "Բզնունյաց 30", contactnumber: "+37494000000"))
+        admissions.append(.init(address: "Ադոնցի 18", contactnumber: "+37494000000"))
+        admissions.append(.init(address: "Մաշտոցի 7", contactnumber: "+37494000000"))
+    }
     private func setupCollectionView() {
         collectionView.backgroundColor = .white
         collectionView.register(AdmissionCell.self, forCellWithReuseIdentifier: cellID)
     }
-
-
 }
 
 //
-//MARK: - UICollectionView DataSource DelegateFlowLayout & Delegate
+//MARK: - Protocol confirmation
 //
 extension AdmissionsController {
     //numberOfItemsInSection
@@ -83,7 +81,6 @@ extension AdmissionsController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         let mapController = MapController()
-        
         
         self.navigationController?.pushViewController(mapController, animated: false)
     }

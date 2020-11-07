@@ -58,6 +58,5 @@ class GroupCell : BaseCell {
         addSubview(stackView)
         stackView.fillSuperview(padding: .init(top: 16, left: 16, bottom: 16, right: 16))
     }
-  
 }
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ItemCell : BaseCell {
+class ItemCell: BaseCell {
     //
     //MARK: - Properties
     //
@@ -27,21 +27,13 @@ class ItemCell : BaseCell {
     private let itemNeededCountLabel = UILabel(text: "Անհրաժեշտ քանակը՝ 1000", textColor: .black, textAlignment: .left, font: .systemFont(ofSize: 14))
     private let separatorView = UIView.createSeparatorView(withColor: .black)
     //
-    //MARK: - Closures
-    //
-    
-    //
     //MARK: - Adding subviews
     //
     override func setupViews()  {
         super.setupViews()
         
-        //backgroundColor = .soldierGray
-        //layer.cornerRadius = 7
-        
         setupSeparatorView()
         setupStackView()
-        
     }
     
     private func setupSeparatorView() {

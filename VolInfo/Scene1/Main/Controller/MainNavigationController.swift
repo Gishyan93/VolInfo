@@ -14,6 +14,4 @@ class MainNavigationController: UINavigationController {
         let homeController = CustomTabBarController()
         viewControllers = [homeController]
     }
-    
-   
 }

@@ -22,11 +22,9 @@ class HotLineHeader: UICollectionReusableView {
         button.addTarget(self, action: #selector(handlePhoneButton), for: .touchUpInside)
         return button
     }()
-    
     //
     //MARK: - Actions
     //
-    
     @objc private func handlePhoneButton() {
         guard let number = URL(string: "tel://" + "1-28") else { return }
         UIApplication.shared.open(number)
@@ -35,18 +33,12 @@ class HotLineHeader: UICollectionReusableView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        
         self.backgroundColor = .appGray
-        
-        
         setupStack()
     }
     //
     //MARK: - Functions
     //
-    
-
     private func setupStack() {
         let stackView = VerticalStackView(arrangedSubviews: [UIView(),messageLabel, phoneButton, defaultPhoneLabel, UIView()], spacing: 8)
         addSubview(stackView)

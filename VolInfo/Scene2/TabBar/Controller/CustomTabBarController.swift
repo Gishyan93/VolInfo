@@ -9,17 +9,19 @@ import UIKit
 
 class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
     
-    //var pagerController: PagerController!
+    //
+    //MARK: - Properties
+    //
     var pagerButtonWidth: CGFloat = 0
     var pagerButtonHeight: CGFloat = 0
     let homeController = GroupController()
     let admissionsController = AdmissionsController()
     let hotLineController = HotLineController()
-    
-    
+    //
+    //MARK: - Lificycle
+    //
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         let homeNavController = UINavigationController(rootViewController: homeController)
         homeNavController.tabBarItem.title = "Գլխավոր"
@@ -40,43 +42,18 @@ class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
              
     }
     
-    private func setupHomeController() {
-        
-    }
-    
-    
-    
-
-
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-
         let generator = UIImpactFeedbackGenerator()
         generator.impactOccurred()
-              
-        
-        
     }
     
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-//      if viewController.isKind(of: PagerController.self) {
-//         let vc =  PagerController()
-//         vc.modalPresentationStyle = .pageSheet
-//         self.present(vc, animated: true, completion: nil)
-//
-//         return false
-//      }
-      return true
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-    
-    //MARK: To avoid dublication of navigation bar
-
-       override func viewWillAppear(_ animated: Bool) {
-           super.viewWillAppear(animated)
-           navigationController?.setNavigationBarHidden(true, animated: animated)
-       }
-
-       override func viewWillDisappear(_ animated: Bool) {
-           super.viewWillDisappear(animated)
-           navigationController?.setNavigationBarHidden(false, animated: animated)
-       }
+      
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 }

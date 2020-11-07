@@ -4,7 +4,6 @@
 //
 //  Created by Tigran Gishyan on 10/25/20.
 //
-
 import UIKit
 
 class AdmissionCell : BaseCell {
@@ -46,9 +45,7 @@ class AdmissionCell : BaseCell {
         
         setupSeparatorView()
         setupStackView()
-        
     }
-    
     private func setupSeparatorView() {
         separatorView.setHeight(1)
     }

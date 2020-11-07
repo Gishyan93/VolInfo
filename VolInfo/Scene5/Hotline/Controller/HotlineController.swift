@@ -8,7 +8,6 @@
 import UIKit
 
 class HotLineController: BaseListController, UICollectionViewDelegateFlowLayout {
-
     //
     //MARK: - Properties
     //
@@ -16,22 +15,14 @@ class HotLineController: BaseListController, UICollectionViewDelegateFlowLayout 
     private let headerID = "headerID"
     
     private var hotline = [HotLine(purpose: "Զինծառայողների մասին ինֆորմացիա, հանգանակություններ կատարելու կարգը, կամավորագրում, հոգեբանական աջակցություն և այլն", contactnumber: "8501"), HotLine(purpose: "Զինծառայողների մասին ինֆորմացիա, հանգանակություններ կատարելու կարգը, կամավորագրում, հոգեբանական աջակցություն և այլն", contactnumber: "8503")]
-    
     //
     //MARK: - Lifecycle methods
     //
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        //hotline.append(.init(purpose: "Զինծառայողների մասին ինֆորմացիա, հանգանակություններ կատարելու կարգը, կամավորագրում, հոգեբանական աջակցություն և այլն", contactnumber: "8501"))
-        //hotline.append(.init(purpose: "Զինծառայողների մասին ինֆորմացիա, հանգանակություններ կատարելու կարգը, կամավորագրում, հոգեբանական աջակցություն և այլն", contactnumber: "8503"))
-        
-        
-        
         setupCollectionView()
     }
-    
     //
     //MARK: - Functions
     //
@@ -40,12 +31,9 @@ class HotLineController: BaseListController, UICollectionViewDelegateFlowLayout 
         collectionView.register(HotLineCell.self, forCellWithReuseIdentifier: cellID)
         collectionView.register(HotLineHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
     }
-
-
 }
-
 //
-//MARK: - UICollectionView DataSource DelegateFlowLayout & Delegate
+//MARK: - Protocol confirmations
 //
 extension HotLineController {
     //numberOfItemsInSection

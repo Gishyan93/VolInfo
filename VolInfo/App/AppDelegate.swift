@@ -13,9 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        
-        
+      
         
         //MARK: Initializing window
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -32,9 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //MARK: Eliminates black line after navigstion bar
         UINavigationBar.appearance().shadowImage = UIImage()
 
-        
-        
-        
         return true
     }
 

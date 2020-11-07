@@ -6,9 +6,7 @@
 //
 
 import Foundation
-//
-// MARK: - Admission
-//
+
 struct Admission: Codable {
     let address, contactnumber: String?
 }

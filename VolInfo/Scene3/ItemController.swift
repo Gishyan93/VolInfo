@@ -1,6 +1,6 @@
 //
 //  ItemController.swift
-//  Soldier
+//  Volinfo
 //
 //  Created by Tigran Gishyan on 10/25/20.
 //
@@ -8,7 +8,6 @@
 import UIKit
 
 class ItemController: BaseListController, UICollectionViewDelegateFlowLayout {
-
     //
     //MARK: - Properties
     //
@@ -19,27 +18,26 @@ class ItemController: BaseListController, UICollectionViewDelegateFlowLayout {
     //
     override func viewDidLoad() {
         super.viewDidLoad()
-        
            
-        item.append(.init(addeddate: "2020-05-06", itemname: "Ատամի խոզանակ", itempriority: "high", itemcount: 1000))
-        item.append(.init(addeddate: "2020-06-07", itemname: "Ատամի մածուկ", itempriority: "low", itemcount: 500))
-        item.append(.init(addeddate: "2020-06-07", itemname: "Անձեռոցիկներ", itempriority: "low", itemcount: 600))
+        createFakeRepository()
         setupCollectionView()
     }
     
     //
     //MARK: - Functions
     //
+    fileprivate func createFakeRepository() {
+        item.append(.init(addeddate: "2020-05-06", itemname: "Ատամի խոզանակ", itempriority: "high", itemcount: 1000))
+        item.append(.init(addeddate: "2020-06-07", itemname: "Ատամի մածուկ", itempriority: "low", itemcount: 500))
+        item.append(.init(addeddate: "2020-06-07", itemname: "Անձեռոցիկներ", itempriority: "low", itemcount: 600))
+    }
     private func setupCollectionView() {
         collectionView.backgroundColor = .white
         collectionView.register(ItemCell.self, forCellWithReuseIdentifier: cellID)
     }
-
-
 }
-
 //
-//MARK: - UICollectionView DataSource DelegateFlowLayout & Delegate
+//MARK: - Protocol confirmations
 //
 extension ItemController {
     //numberOfItemsInSection
@@ -75,13 +73,5 @@ extension ItemController {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-    
-    
-    //didSelectItemAt
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            
-        print("OKAY")
-    }
-    
 }
 
