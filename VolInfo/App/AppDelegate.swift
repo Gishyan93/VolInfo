@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         window?.rootViewController = MainNavigationController()
-        UINavigationBar.appearance().barTintColor = .soldierBlue
+        UINavigationBar.appearance().barTintColor = .appBlue
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().tintColor = UIColor.black
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]

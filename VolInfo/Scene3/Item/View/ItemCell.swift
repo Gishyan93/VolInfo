@@ -22,7 +22,7 @@ class ItemCell : BaseCell {
             }
         }
     }
-    private let dateLabel = UILabel(text: "05-06-2020", textColor: .soldierLightGray, textAlignment: .left, font: .systemFont(ofSize: 12))
+    private let dateLabel = UILabel(text: "05-06-2020", textColor: .appLightGray, textAlignment: .left, font: .systemFont(ofSize: 12))
     private let itemNameLabel = UILabel(text: "Ատամի խոզանակ", textColor: .black, textAlignment: .left, font: .systemFont(ofSize: 14))
     private let itemNeededCountLabel = UILabel(text: "Անհրաժեշտ քանակը՝ 1000", textColor: .black, textAlignment: .left, font: .systemFont(ofSize: 14))
     private let separatorView = UIView.createSeparatorView(withColor: .black)

@@ -44,7 +44,7 @@ class GroupCell : BaseCell {
     override func setupViews()  {
         super.setupViews()
         
-        backgroundColor = .soldierGray
+        backgroundColor = .appGray
         layer.cornerRadius = 7
         
         setupStackView()
