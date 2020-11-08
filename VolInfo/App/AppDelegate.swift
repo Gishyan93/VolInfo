@@ -26,9 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().tintColor = UIColor.black
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
-        
-        //MARK: Eliminates black line after navigstion bar
-        UINavigationBar.appearance().shadowImage = UIImage()
 
         return true
     }
